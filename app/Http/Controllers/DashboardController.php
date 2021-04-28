@@ -47,9 +47,10 @@ class DashboardController extends Controller
          if (Auth::user()->activo == 0)
            return "Usuario No Activado";
         
-        /*
+       
         $clientes = Cliente::orderBy('cliente','asc')->get();
         $tecnicos = User::where([['userType','=','6'],['activo','=','1']])->orWhere([['userType','=','5'],['activo','=','1']])->orWhere([['userType','=','8'],['activo','=','1']])->get();
+        
         $ayudantes = User::where([['userType','=','7'],['activo','=','1']])->get();
         $params = ['thisMonthMotors'=>$this->getThisMonthMotors(),
                    'thisMonthClientes'=>$this->getThisMonthClientes(),
@@ -73,7 +74,7 @@ class DashboardController extends Controller
                 //return redirect('/motores');
                 return view('dashboards.warroom')->with($params); // cambiar a warroom
             break;
-        } */
+        } 
        
     }
 }
