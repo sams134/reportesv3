@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('clientes','ClientesController');
+Route::resource('/clientes','ClientesController');
 Route::resource('motores','MotoresController');
 Route::resource('empleados','UsuariosController');
 Route::get('/dashboard', 'DashboardController@index');
