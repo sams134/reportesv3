@@ -12,4 +12,10 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/assets/sass/internal.scss', 'public/css')
+  // .copy(
+    //  'node_modules/@fortawesome/fontawesome-free/webfonts',
+      //'public/webfonts')
+   ;
+//"@fortawesome/fontawesome-free": "^4.7.0",

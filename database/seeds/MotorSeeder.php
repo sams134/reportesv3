@@ -21,7 +21,7 @@ class MotorSeeder extends Seeder
             $motor->year = "2M21";
             $motor->os = $faker->unique()->numberBetween(1,2000)."";
             $motor->hp = $faker->numerify('##.#');
-            $motor->serie = $faker->bothify('###??-####/19## - ?');
+            $motor->serie = $faker->unique()->bothify('###??-####/19## - ?');
             $motor->hpkw = $faker->numberBetween(0,1);
             $motor->marca = $faker->randomElement($array = array ('a','b','c'));
             $motor->fecha_ingreso = $faker->dateTimeBetween($startDate = '-4 months', $endDate = 'now', $timezone = null);
