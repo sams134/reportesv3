@@ -28,16 +28,18 @@
                      </div><!--columna -->
               </div><!--form group -->
               <div class="form-group">
-                     {{Form::label('yearLabel','Numero de Orden:',['class'=>'control-label col-md-3 col-sm-3 col-xs-12'])}}
-                      <div class="col-md-3 col-sm-3 col-xs-6">
-                               {{Form::text('year',$newYear,['class'=>'form-control text-uppercase','placeholder'=>'2M19','required'=>'required','id'=>'year'])}}                           
+                     
+                     <label for="yearlabel" class="control-label col-md-3 col-sm-3 col-xs-12">Numero de Orden:</label>
+                      <div class="col-md-3 col-sm-3 col-xs-6">                       
+                               <input type="text" value="{{$newYear}}" class="form-control text-uppercase" placeholder="2M19" id="year" name="year" required >
                       </div> <!--columna -->
-                      <div class="col-md-6 col-sm-6 col-xs-6`">
-                             {{Form::text('os',$newOs,['class'=>'form-control col-md-','placeholder'=>'0001','required'=>'required','id'=>'newOs'])}}                           
+                      <div class="col-md-6 col-sm-6 col-xs-6`">                        
+                             <input type="text" name="os" value="{{$newOs}}" class="form-control col-md-" placeholder="0001" id="newOs" required>
                       </div> <!--columna -->
               </div><!--form group -->
                <div class="form-group">
-                       {{Form::label('fecha','Fecha Ingreso:',['class'=>'control-label col-md-3 col-sm-3 col-xs-12'])}}
+                       
+                       <label for="fecha" class="control-label col-md-3 col-sm-3 col-xs-12">Fecha Ingreso: </label>
                        <div class="col-md-9 col-sm-9 col-xs-12"> 
                               
                                   <div class='input-group date' id='datetimepicker1' >
@@ -51,14 +53,14 @@
                 </div><!--form group -->
                
                 <div class="form-group">
-                       {{Form::label('trabajos','Comentarios del Cliente:',['class'=>'control-label col-md-3 col-sm-3 col-xs-12'])}}
-                      
-                     <div class="col-md-9 col-sm-9 col-xs-12">  
-                         {{Form::textarea('trabajoARealizar','',['class'=>'form-control col-md-','placeholder'=>'Rebobinado...','required'=>'required'])}}                           
-                     </div><!--columna -->
+                        <label for="comentarios" class="control-label col-md-3 col-sm-3 col-xs-12">Comentarios del Cliente:</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">    
+                              <textarea name="trabajoARealizar" id="" class="form-control col-md-" placeholder="Rebobinado.." required></textarea>
+                        </div><!--columna -->
                 </div><!--form group -->
                 <div class="form-group">
-                            {{Form::label('trabajos','Contacto:',['class'=>'control-label col-md-3 col-sm-3 col-xs-12'])}}
+                            
+                            <label for="contacto" class="control-label col-md-3 col-sm-3 col-xs-12">Contacto:</label>
                           <div class="col-md-9 col-sm-9 col-xs-12">  
                                 @if ($id_cliente != 0)
                                 <!--  {{Form::text('contacto',$selectedClient->contacto,['id'=>'id_contactoTXT','class'=>'form-control text-uppercase','placeholder'=>'Nombre de Contacto','required'=>'required'])}}   -->
@@ -75,7 +77,8 @@
                           </div><!--columna -->
                 </div><!--form group -->
                 <div class="form-group">
-                            {{Form::label('cotizarlbl','Enviar Correo',['class'=>'control-label col-md-3 col-sm-3 col-xs-12'])}}
+                            
+                            <label for="sendemail" class="control-label col-md-3 col-sm-3 col-xs-12">Enviar Correo</label>
                              <div class="col-md-6 col-sm-6 col-xs-6">
                                   No <input name="enviar_os" type="checkbox" class="js-switch"  checked=""/> Si
                              </div> <!--columna -->                                                    
